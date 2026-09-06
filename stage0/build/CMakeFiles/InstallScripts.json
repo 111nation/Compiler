@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/chloe/Projects/Compiler/stage0/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
