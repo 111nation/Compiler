@@ -4,6 +4,7 @@
 #define VERSION "0.0.1"
 
 int main(int argc, char** argv) {
+	// Nothing to do
 	if (argc <= 1) {
 		printf("Nothing to do, use \"--help\" for help\n");
 		return 0;
@@ -23,6 +24,7 @@ int main(int argc, char** argv) {
 		return 0;
 	} 
 
+	// Invalid Command
 	printf("Invalid command\nUse \"--help\" for help\n");
 	return 0;
 }

@@ -1,3 +1,0 @@
-/home/chloe/Projects/Compiler/stage0/build/CMakeFiles/compiler.dir
-/home/chloe/Projects/Compiler/stage0/build/CMakeFiles/edit_cache.dir
-/home/chloe/Projects/Compiler/stage0/build/CMakeFiles/rebuild_cache.dir
