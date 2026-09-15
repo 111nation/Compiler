@@ -1,5 +1,7 @@
+#include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define VERSION "0.0.1"
 #define EXTENSION ".kr"
@@ -53,6 +55,36 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 
+    FILE *fptr = fopen(argv[1], "r");
+
+	if (fptr == NULL) {
+		printf("Failed to read from %s\n", argv[1]);
+		return 0;
+	}
+
+	char* fileContents = NULL;
+	size_t len = 0;
+	ssize_t bytes = 0;
+	ssize_t total_bytes = 0;
+
+	while (TRUE) {
+		bytes = getline(&fileContents, &len, fptr);
+		if (bytes == -1) break;
+		total_bytes += bytes;
+	}
+
+	if (total_bytes <= 0) {
+		 printf("File is empty\n");
+	 }
+
+	if (!fileContents) free(fileContents);
+	fclose(fptr);
+
+	printf("\n%s\n", fileContents-(total_bytes*sizeof(char)));
+	printf("\n%zd bytes read\n", total_bytes);
 	printf("Compiling %s\n", argv[1]);
+
 	return 0;
+
+	
 }
