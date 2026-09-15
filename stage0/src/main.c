@@ -24,7 +24,12 @@ int main(int argc, char** argv) {
 		return 0;
 	} 
 
-	// Invalid Command
+	if (strcmp(argv[1], "--tafara") == 0) {
+		printf("Compiler - Ne My Lord👑\n");
+		return 0;
+	} 
+
+// Invalid Command
 	printf("Invalid command\nUse \"--help\" for help\n");
 	return 0;
 }
